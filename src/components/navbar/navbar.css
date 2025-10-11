@@ -1,0 +1,86 @@
+body {
+  padding-top: 120px; /* adjust depending on your navbar height */
+}
+
+.navbar {
+  position: fixed; /* keeps it in place while scrolling */
+  top: 0; /* sticks to the top */
+  left: 50%; /* center horizontally */
+  transform: translateX(-50%); /* perfect center alignment */
+  z-index: 1000; /* make sure it stays above other elements */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 20px auto;
+  padding: 5px 40px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.521), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* lets the mouse pass through */
+}
+
+.navbar:hover::before {
+  opacity: 1; /* show glow when hovering */
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  list-style: none;
+  font-size: 18px;
+}
+.navbar-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav-connect {
+  padding: 15px 30px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff; /* white text looks good */
+  transition: all 0.3s ease;
+}
+
+@font-face {
+  font-family: 'MyCustomFont'; /* name you’ll use in CSS */
+  src: url('../fonts/ObloSemiBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar h1 {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 36px;
+  background: linear-gradient(270deg, #ff512f, #dd2476, #f7971e, #00c6ff, #0072ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradient 8s ease infinite;
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
