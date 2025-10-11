@@ -32,7 +32,11 @@ body {
   width: 400px;
   height: 400px;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.521), transparent 40%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.521),
+    transparent 40%
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none; /* lets the mouse pass through */
@@ -62,16 +66,28 @@ body {
 }
 
 @font-face {
-  font-family: 'MyCustomFont'; /* name you’ll use in CSS */
-  src: url('../fonts/ObloSemiBold.otf') format('opentype');
+  font-family: 'MyCustomFont';
+  src: url('/fonts/ObloLight.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
+/* Apply the font */
 .navbar h1 {
   font-family: 'MyCustomFont', sans-serif;
+}
+
+.navbar h1 {
+  font-family: "MyCustomFont", sans-serif;
   font-size: 36px;
-  background: linear-gradient(270deg, #ff512f, #dd2476, #f7971e, #00c6ff, #0072ff);
+  background: linear-gradient(
+    270deg,
+    #ff512f,
+    #dd2476,
+    #f7971e,
+    #00c6ff,
+    #0072ff
+  );
   background-size: 400% 400%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -80,7 +96,13 @@ body {
 }
 
 @keyframes textGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
