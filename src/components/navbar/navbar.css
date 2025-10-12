@@ -1,13 +1,9 @@
-body {
-  padding-top: 120px; /* adjust depending on your navbar height */
-}
-
 .navbar {
-  position: fixed; /* keeps it in place while scrolling */
-  top: 0; /* sticks to the top */
-  left: 50%; /* center horizontally */
-  transform: translateX(-50%); /* perfect center alignment */
-  z-index: 1000; /* make sure it stays above other elements */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 
   display: flex;
   justify-content: space-between;
@@ -16,11 +12,16 @@ body {
   margin: 20px auto;
   padding: 5px 40px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   overflow: hidden;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.08
+  ); 
+  backdrop-filter: blur(20px) saturate(200%) contrast(110%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(120%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   transition: all 0.5s ease;
 }
 
@@ -39,11 +40,11 @@ body {
   );
   opacity: 0;
   transition: opacity 0.3s ease;
-  pointer-events: none; /* lets the mouse pass through */
+  pointer-events: none;
 }
 
 .navbar:hover::before {
-  opacity: 1; /* show glow when hovering */
+  opacity: 1;
 }
 
 .navbar-menu {
@@ -61,20 +62,20 @@ body {
   padding: 15px 30px;
   font-size: 15px;
   cursor: pointer;
-  color: #fff; /* white text looks good */
+  color: inherit;
   transition: all 0.3s ease;
 }
 
 @font-face {
-  font-family: 'MyCustomFont';
-  src: url('/fonts/ObloLight.otf') format('opentype');
+  font-family: "MyCustomFont";
+  src: url("/fonts/ObloLight.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 /* Apply the font */
 .navbar h1 {
-  font-family: 'MyCustomFont', sans-serif;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 .navbar h1 {
@@ -82,6 +83,11 @@ body {
   font-size: 36px;
   background: linear-gradient(
     270deg,
+    #ff512f,
+    #dd2476,
+    #f7971e,
+    #00c6ff,
+    #0072ff,
     #ff512f,
     #dd2476,
     #f7971e,
@@ -105,4 +111,10 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.navbar a,
+.navbar h1,
+.nav-connect {
+  transition: color 0.5s ease;
 }

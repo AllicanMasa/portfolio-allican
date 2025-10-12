@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  transition: background 1s ease;
+}
+
+.header.day {
+  background: radial-gradient(circle at 50% 50%, #fffae3, #ffefcb, #ffea8a);
+}
+
+.header.night {
+  background: radial-gradient(circle at 50% 50%, #001a33, #0b2340, #00111f);
+}
+
+/* Glassmorphic box */
+.header-box {
+  padding: 50px 80px;
+  border-radius: 30px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Morphing text style */
+.morph-text {
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(90deg, #ff7eb3, #65d6ce, #91eae4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+  transform-origin: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
