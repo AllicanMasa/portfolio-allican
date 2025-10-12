@@ -26,7 +26,7 @@ const Content = () => {
       <div className="glass-box">
         <img src={portfolio} alt="Portfolio" />
         <div className="text-box">
-          <h1>Nice, Welcome to my portfolio!</h1>
+          <h1>Who is me? haha</h1>
           <p>
             Hello! I’m Karl Allican, a graduate of Bachelor of Science in
             Information Technology from Quezon City University, Batch 2025.
