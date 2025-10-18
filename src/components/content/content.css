@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 1s ease;
 }
 
 .glass-box {
@@ -12,23 +11,10 @@
   gap: 40px;
   padding: 40px 60px;
   width: 100%;
-  backdrop-filter: blur(20px) saturate(180%) contrast(120%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(120%);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: translateY(60px);
-  filter: blur(20px);
-  transition: all 1.2s ease;
-}
-
-.content.visible .glass-box {
-  opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
 }
 
 .glass-box img {
-  width: 320px;
+  width: 300px;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
@@ -48,11 +34,6 @@
     #dd2476,
     #f7971e,
     #00c6ff,
-    #0072ff,
-    #ff512f,
-    #dd2476,
-    #f7971e,
-    #00c6ff,
     #0072ff
   );
   background-size: 400% 400%;
@@ -60,19 +41,6 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
-  animation: gradientAnimation 10s linear infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .text-box p {

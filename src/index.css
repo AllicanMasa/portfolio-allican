@@ -1,15 +1,66 @@
-*{
-  margin: 0;
-  padding: 0;
-  scrollbar-width: none;
-}
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-body{
-  height: 100vh;
-  background: #161513;
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #1a1b4b, #090b1a 70%);
   color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "SF Pro Display", "Poppins", "Inter", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  filter: blur(180px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Left pinkish glow */
+body::before {
+  top: -100px;
+  left: -200px;
+  background: radial-gradient(circle, #ff00cc, transparent 70%);
+  animation: float-left 5s ease-in-out infinite alternate;
+}
+
+/* Right blue glow */
+body::after {
+  bottom: -150px;
+  right: -200px;
+  background: radial-gradient(circle, #00ccff, transparent 70%);
+  animation: float-right 5s ease-in-out infinite alternate;
+}
+
+@keyframes float-left {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 60px) scale(1.05);
+  }
+  100% {
+    transform: translate(-30px, 30px) scale(1.1);
+  }
+}
+
+@keyframes float-right {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -40px) scale(1.05);
+  }
+  100% {
+    transform: translate(30px, -60px) scale(1.1);
+  }
 }

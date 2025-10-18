@@ -1,28 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "./content.css";
 import portfolio from "../../assets/portfolio.png";
 
 const Content = () => {
-  const contentRef = useRef(null);
-
-  useEffect(() => {
-    const section = contentRef.current;
-
-    const handleScroll = () => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        section.classList.add("visible");
-      } else {
-        section.classList.remove("visible");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div className="content" ref={contentRef}>
+    <div className="content">
       <div className="glass-box">
         <img src={portfolio} alt="Portfolio" />
         <div className="text-box">
