@@ -28,11 +28,23 @@ const Navbar = () => {
       updateTextColor();
     };
 
+    const handleMouseMove = (e) => {
+      const rect = navbar.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      navbar.style.setProperty("--x", `${x}px`);
+      navbar.style.setProperty("--y", `${y}px`);
+    };
+
+    // Add listeners
     window.addEventListener("scroll", handleScroll);
+    navbar.addEventListener("mousemove", handleMouseMove);
     updateTextColor();
 
+    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      navbar.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
