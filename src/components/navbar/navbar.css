@@ -1,22 +1,21 @@
 .navbar {
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  height: 50px; /* ✅ Fixed height */
-  padding: 12px 40px; /* ✅ Consistent padding */
+  width: 50%;
+  height: 50px;
+  padding: 10px 40px;
   margin: 0 auto;
   border-radius: 50px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px) saturate(200%) contrast(110%);
   -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(120%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
   transition: all 0.5s ease;
 }
 
@@ -47,7 +46,7 @@
   gap: 30px;
   align-items: center;
   list-style: none;
-  font-size: 18px;
+  font-size: 15px;
 }
 .navbar-menu a {
   text-decoration: none;
@@ -81,7 +80,7 @@
 
 .navbar h1 {
   font-family: "MyCustomFont", sans-serif;
-  font-size: 36px;
+  font-size: 30px;
   background: linear-gradient(
     270deg,
     #ff512f,

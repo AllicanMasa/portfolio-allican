@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import "./header.css";
 
-const greetings = [
+const Greetings = [
   "Hello, welcome to my website!",              
   "Bonjour, bienvenue sur mon site Web !",      
   "Hola, ¡bienvenido a mi sitio web!",
@@ -28,7 +28,7 @@ const Header = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const nextIndex = (index + 1) % greetings.length;
+      const nextIndex = (index + 1) % Greetings.length;
 
       // Morph animation simulation
       gsap.to(textRef.current, {
@@ -37,7 +37,7 @@ const Header = () => {
         opacity: 0,
         ease: "power2.inOut",
         onComplete: () => {
-          textRef.current.innerText = greetings[nextIndex];
+          textRef.current.innerText = Greetings[nextIndex];
           gsap.fromTo(
             textRef.current,
             { scale: 1.15, opacity: 0 },
@@ -55,7 +55,7 @@ const Header = () => {
     <header className={`header ${timeOfDay}`}>
       <div className="header-box">
         <h1 ref={textRef} className="morph-text">
-          {greetings[index]}
+          {Greetings[index]}
         </h1>
       </div>
     </header>
