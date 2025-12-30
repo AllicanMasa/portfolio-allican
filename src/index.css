@@ -8,7 +8,6 @@ body {
   padding: 0;
   background: radial-gradient(circle at top left, #1a1b4b, #090b1a 70%);
   color: white;
-  font-family: "SF Pro Display", "Poppins", "Inter", sans-serif;
   overflow-x: hidden;
   position: relative;
 }
@@ -25,7 +24,6 @@ body::after {
   z-index: -1;
 }
 
-/* Left pinkish glow */
 body::before {
   top: -100px;
   left: -200px;
@@ -33,7 +31,6 @@ body::before {
   animation: float-left 5s ease-in-out infinite alternate;
 }
 
-/* Right blue glow */
 body::after {
   bottom: -150px;
   right: -200px;
