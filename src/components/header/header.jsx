@@ -1,13 +1,28 @@
-'use client';
+"use client";
 import React from "react";
-import gsap from "gsap";
 import Orb from "@/components/orb";
 import "./header.css";
 
 const Header = () => {
   return (
     <header className="header relative overflow-hidden min-h-screen">
-      <div className="absolute inset-0 -z-10">
+      <div className="intro">
+        <h1 className="intro-text">BUILD WITH ME</h1>
+        <p>Design. Code. Ship.</p>
+        <div className="resume">
+          <a
+            href={`${import.meta.env.BASE_URL}resume/Resume.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View my resume
+          </a>
+        </div>
+        <div className="connect">
+          <a href="#socials">Contact me</a>
+        </div>
+      </div>
+      <div className="absolute inset-0">
         <Orb
           hue={10}
           hoverIntensity={0.7}
@@ -16,12 +31,6 @@ const Header = () => {
           autorotate={true}
           backgroundColor="#000000"
         />
-      </div>
-
-      <div className="header-box relative z-10 flex min-h-screen items-center justify-center">
-        <h1 className="morph-text text-center text-4xl md:text-6xl font-bold text-white pointer-events-allow">
-          BWISET NA REACT 'TO
-        </h1>
       </div>
     </header>
   );

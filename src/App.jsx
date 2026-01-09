@@ -1,24 +1,20 @@
 import React from "react";
 import Navbar from "./components/navbar/navbar";
 import Header from "./components/header/header";
-import Content from "./components/content/content";
 import About from "./components/about/about";
 import Projects from "./components/projects/projects";
-import Contact from "./components/contact/contact";
+import Skills from "./components/skills/skills";
+import Socials from "./components/socials/socials";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <section id="home" data-theme="light">
+      <section id="home" data-theme="dark">
         <Header />
       </section>
 
-      <section id="content" data-theme="dark">
-        <Content />
-      </section>
-
-      <section id="about" data-theme="light">
+      <section id="about" data-theme="dark">
         <About />
       </section>
 
@@ -26,8 +22,12 @@ const App = () => {
         <Projects />
       </section>
 
-      <section id="contact" data-theme="light">
-        <Contact />
+      <section id="skills" data-theme="dark">
+        <Skills />
+      </section>
+
+      <section id="socials" data-theme="dark">
+        <Socials />
       </section>
     </div>
   );

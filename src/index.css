@@ -6,10 +6,15 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at top left, #1a1b4b, #090b1a 70%);
+  background: radial-gradient(circle at top left, #0e0f28, #080a19 70%);
   color: white;
   overflow-x: hidden;
   position: relative;
+
+  /* to prevent copy & paste */
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 body::before,
@@ -36,6 +41,13 @@ body::after {
   right: -200px;
   background: radial-gradient(circle, #00ccff, transparent 70%);
   animation: float-right 5s ease-in-out infinite alternate;
+}
+
+@font-face {
+  font-family: "Chopsic";
+  src: url("/fonts/Chopsic-K6Dp.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @keyframes float-left {

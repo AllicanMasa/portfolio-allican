@@ -1,20 +1,36 @@
 .projects {
+  align-items: center;
   font-family: "SF Pro Display", "Poppins", "Inter", sans-serif;
-  max-width: 92%;
-  margin: 0 auto;
-  margin-bottom: 3%;
-  padding: 2rem 0;
+  padding: 5rem 0;
 }
 
 .projects h1 {
-  font-size: 32px;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .projects p {
+  font-size: 0.9rem;
   margin-top: 0;
   text-align: justify;
+}
+
+.projects-top,
+.projects-bottom {
+  width: 92%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #05001d75;
+  border-radius: 1.5rem 1.5rem 0.2rem 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.projects-bottom {
+  height: 10rem;
+  border-radius: 0.2rem 0.2rem 1.5rem 1.5rem;
 }
 
 .ticker-wrapper {
@@ -22,36 +38,38 @@
   overflow: hidden;
   margin: 0 auto;
   width: 100%;
+  height: auto;
 }
 
 .ticker-wrapper::before,
 .ticker-wrapper::after {
   content: "";
   position: absolute;
-  margin: auto;
+  margin: 0 auto;
   top: 0;
   bottom: 0;
-  width: 2%;
-  height: 100%;
+  width: 5%;
+  height: 95%;
   z-index: 2;
   pointer-events: none;
 }
 
 .ticker-wrapper::before {
   left: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
 }
 
 .ticker-wrapper::after {
   right: 0;
-  background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
 }
 
 .ticker {
   display: flex;
   gap: 10px;
-  animation: tickerScroll 20s linear infinite;
+  animation: tickerScroll 10s linear infinite;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 @keyframes scroll {
@@ -61,7 +79,7 @@
   100% {
     transform: translateX(-50%);
   }
-}  
+}
 
 .image-row::-webkit-scrollbar {
   display: none;
@@ -75,7 +93,6 @@
   overflow: hidden;
   scroll-snap-align: start;
   flex-shrink: 0;
-  background: rgba(255, 0, 0, 0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -96,5 +113,31 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects h1 {
+    font-size: 1.5rem;
+  }
+  .projects p {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+  .ticker {
+    animation: tickerScroll 5s linear infinite;
+  }
+  .projects-top {
+    border-radius: 1rem;
+  }
+  .projects-bottom {
+    display: none;
+  }
+  .image-card {
+    width: 90%;
+  }
+  .ticker-wrapper::before,
+  .ticker-wrapper::after {
+    display: none;
   }
 }
