@@ -10,11 +10,9 @@ body {
   color: white;
   overflow-x: hidden;
   position: relative;
-
-  /* to prevent copy & paste */
-  user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 
 body::before,

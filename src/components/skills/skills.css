@@ -137,11 +137,11 @@
 @media (max-width: 768px) {
   .skills-content {
     display: flex;
-    gap: 2rem;
+    gap: 0.5rem;
   }
   .flip-card {
-    height: 160px;
-    width: 160px;
+    height: 150px;
+    width: 150px;
   }
   .skill-intro {
     font-size: 1.5rem;
@@ -159,6 +159,8 @@
     font-size: 0.8rem;
   }
   .flip-card-back {
+    background-color: #05001d75;
+    box-shadow: 0 1px 5px rgba(247, 247, 247, 0.204);
     font-size: 0.5rem;
     line-height: 0.8rem;
   }
@@ -166,7 +168,7 @@
     background-color: transparent;
     border-radius: 0;
     border: 0;
-    width: 100%;
+    width: 92%;
   }
   .skills-content img {
     width: 1.5rem;
