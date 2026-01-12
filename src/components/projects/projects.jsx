@@ -3,8 +3,18 @@ import "./projects.css";
 
 const data = [
   {
+    title: "Capstone: Design Software & E-Commerce Platform with 3D Avatar",
+    images: [
+      "@/../images/7.png",
+      "@/../images/8.png",
+      "@/../images/9.png",
+    ],
+    details:
+      "Contributed to an innovative e-commerce platform by creating detailed system flowcharts, supporting process planning, gathering requirements, and developing comprehensive documentation for potential implementation.",
+  },
+  {
     title: "Gym Management System with Fitness Tracking & Reports",
-    images: ["src/assets/images/5.png", "src/assets/images/6.png"],
+    images: ["@/../images/5.png", "@/../images/6.png"],
     details:
       "Developed a full-stack Gym Management System with automated membership, payment tracking, fitness monitoring, and coach-managed workout plans, featuring responsive web and desktop interfaces, PHP/MySQL backend, automated reports, and comprehensive documentation.",
   },
@@ -12,23 +22,13 @@ const data = [
     title:
       "Resort Reservation System with 360° View, PayPal Integration & Chatbot",
     images: [
-      "src/assets/images/1.png",
-      "src/assets/images/2.png",
-      "src/assets/images/3.png",
-      "src/assets/images/4.png",
+      "@/../images/1.png",
+      "@/../images/2.png",
+      "@/../images/3.png",
+      "@/../images/4.png",
     ],
     details:
       "Developed a full-stack Resort Booking System with user account management, facility reservations, automated receipts, PayPal integration, 360° virtual tours, a chatbot, and an admin dashboard, supported by technical planning and documentation.",
-  },
-  {
-    title: "Capstone: Design Software & E-Commerce Platform with 3D Avatar",
-    images: [
-      "src/assets/images/7.png",
-      "src/assets/images/8.png",
-      "src/assets/images/9.png",
-    ],
-    details:
-      "Contributed to an innovative e-commerce platform by creating detailed system flowcharts, supporting process planning, gathering requirements, and developing comprehensive documentation for potential implementation.",
   },
 ];
 
