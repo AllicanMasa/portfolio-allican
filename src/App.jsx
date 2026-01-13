@@ -4,6 +4,7 @@ import Header from "./components/header/header";
 import About from "./components/about/about";
 import Projects from "./components/projects/projects";
 import Skills from "./components/skills/skills";
+import Curvedloop from "./components/animation/curvedloop";
 import Socials from "./components/socials/socials";
 
 const App = () => {
@@ -24,6 +25,10 @@ const App = () => {
 
       <section id="skills" data-theme="dark">
         <Skills />
+      </section>
+
+      <section id="Curvedloop" data-theme="dark">
+        <Curvedloop />
       </section>
 
       <section id="socials" data-theme="dark">

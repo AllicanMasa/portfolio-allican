@@ -40,7 +40,7 @@ const About = () => {
             clean interfaces, with experience as a Programmer, System Analyst,
             and Documentation Lead, actively involved in the full system
             development lifecycle, and leading analysis and documentation for a
-            three-platform interconnected system.”
+            three-platform interconnected system.
           </p>
         </div>
       </div>

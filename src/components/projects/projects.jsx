@@ -69,14 +69,12 @@ export default function Projects() {
           where needed.
         </p>
       </div>
-      <div className="carousel-container">
+      <div className="card-container">
         <button className="nav-btn left" onClick={prevSlide}>
           &#10094;
         </button>
 
         <div className="card">
-          <div className="card-title">{data[cardIndex].title}</div>
-
           <div className="card-image">
             <img
               src={data[cardIndex].images[imageIndex]}
@@ -84,6 +82,7 @@ export default function Projects() {
             />
           </div>
 
+          <div className="card-title">{data[cardIndex].title}</div>
           <div className="card-details">{data[cardIndex].details}</div>
         </div>
 

@@ -8,7 +8,7 @@ const Socials = () => {
   return (
     <div className="socials">
       <section className="socials-title">
-        <h1>Let’s build something meaningful together!</h1>
+        <h1>Let’s build something together!</h1>
         <p>Feel free to reach out — I’m always open to new ideas, collaborations, or just a quick hello.</p>
       </section>
       <div className="contents">

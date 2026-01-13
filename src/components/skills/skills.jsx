@@ -1,6 +1,5 @@
 import React from "react";
 import "./skills.css";
-import CurvedLoop from "@/components/CurvedLoop";
 import FlipCard from "@/components/skills/FlipCard";
 import { MdDesignServices } from "react-icons/md";
 import { FaLaptop, FaLaptopCode } from "react-icons/fa";
@@ -23,28 +22,22 @@ const Skills = () => {
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
     react:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    html:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-    css:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+    html: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+    css: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
     javascript:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
     python:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-    php:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+    php: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
     csharp:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
-    sql:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+    sql: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
     github:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
-    git:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    git: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     vscode:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
-    vs:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg",
+    vs: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg",
   };
 
   const designTech = [
@@ -84,9 +77,8 @@ const Skills = () => {
 
         <section className="skill-description">
           <p>
-            When developing a project, it’s important to understand how
-            different skills work together, from creating the design to making
-            sure everything functions properly behind the scenes.
+            These are the tools and technologies I use to design, build, and
+            maintain functional and user-friendly applications.
           </p>
         </section>
 
@@ -149,18 +141,6 @@ const Skills = () => {
           </FlipCard>
         </div>
       </div>
-
-      {/* curved loop */}
-      <section className="curved-loop">
-        <CurvedLoop
-          marqueeText="Deep Dive ✦ and ✦ Know Me ✦ More! ✦"
-          speed={4}
-          curveAmount={200}
-          direction="right"
-          interactive={true}
-          className="custom-text-style"
-        />
-      </section>
     </div>
   );
 };
