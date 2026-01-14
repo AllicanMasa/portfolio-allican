@@ -19,7 +19,7 @@
     "framer-motion": "^12.23.26",
     "gsap": "^3.14.2",
     "lucide-react": "^0.562.0",
-    "motion": "^12.23.26",
+    "motion": "^12.26.2",
     "ogl": "^1.0.11",
     "react": "^19.1.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",

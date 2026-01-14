@@ -3,6 +3,7 @@ import React from "react";
 import Orb from "@/components/orb";
 import "./header.css";
 
+
 const Header = () => {
   return (
     <header className="header relative overflow-hidden min-h-screen">

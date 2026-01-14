@@ -41,7 +41,7 @@ export default function Projects() {
       setImageIndex((prev) =>
         prev === data[cardIndex].images.length - 1 ? 0 : prev + 1
       );
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [cardIndex]);
