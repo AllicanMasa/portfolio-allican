@@ -1,65 +1,47 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectModal";
 import "./projects.css";
 
-const data = [
+const projects = [
   {
+    id: 1,
     title: "Capstone: Design Software & E-Commerce Platform with 3D Avatar",
-    images: [
-      "@/../images/7.png",
-      "@/../images/8.png",
-      "@/../images/9.png",
-    ],
-    details:
-      "Contributed to an innovative e-commerce platform by creating detailed system flowcharts, supporting process planning, gathering requirements, and developing comprehensive documentation for potential implementation.",
+    shortdesc: "Supported an e-commerce platform through system flowcharts, requirements gathering, and documentation.",
+    description: "Contributed to an innovative e-commerce platform by creating detailed system flowcharts, supporting process planning, gathering requirements, and developing comprehensive documentation for potential implementation.",
+    images: ["./images/7.png", "./images/8.png", "./images/9.png"],
   },
   {
+    id: 2,
     title: "Gym Management System with Fitness Tracking & Reports",
-    images: ["@/../images/5.png", "@/../images/6.png"],
-    details:
-      "Developed a full-stack Gym Management System with automated membership, payment tracking, fitness monitoring, and coach-managed workout plans, featuring responsive web and desktop interfaces, PHP/MySQL backend, automated reports, and comprehensive documentation.",
+    shortdesc: "Built a full-stack Gym Management System with membership, payment, and fitness tracking.",
+    description: "Developed a full-stack Gym Management System with automated membership, payment tracking, fitness monitoring, and coach-managed workout plans, featuring responsive web and desktop interfaces, PHP/MySQL backend, automated reports, and comprehensive documentation.",
+    images: ["./images/5.png", "./images/6.png"],
   },
   {
-    title:
-      "Resort Reservation System with 360° View, PayPal Integration & Chatbot",
-    images: [
-      "@/../images/1.png",
-      "@/../images/2.png",
-      "@/../images/3.png",
-      "@/../images/4.png",
-    ],
-    details:
-      "Developed a full-stack Resort Booking System with user account management, facility reservations, automated receipts, PayPal integration, 360° virtual tours, a chatbot, and an admin dashboard, supported by technical planning and documentation.",
+    id: 3,
+    title: "Resort Reservation System with 360° View, PayPal Integration & Chatbot",
+    shortdesc: "Built a full-stack Resort Booking System with online reservations and PayPal integration.",
+    description: "Developed a full-stack Resort Booking System with user account management, facility reservations, automated receipts, PayPal integration, 360° virtual tours, a chatbot, and an admin dashboard, supported by technical planning and documentation.",
+    images: ["./images/1.png", "./images/2.png", "./images/3.png", "./images/4.png"],
   },
+  {
+    id: 4,
+    title: "Documentation: Technical User Manual",
+    shortdesc: "Designed a technical user manual translating complex 3D apparel and e-commerce workflows into clear, user-friendly guides.",
+    description: "Designed and structured a comprehensive technical user manual as a System Analyst, translating complex 3D apparel and e-commerce workflows into clear instructional modules, interface mappings, and user-centric guides to ensure seamless platform onboarding and system transparency.",
+    images: ["./images/10.png"],
+  },
+
 ];
 
 export default function Projects() {
-  const [cardIndex, setCardIndex] = useState(0);
-  const [imageIndex, setImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImageIndex((prev) =>
-        prev === data[cardIndex].images.length - 1 ? 0 : prev + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [cardIndex]);
-
-  const prevSlide = () => {
-    setCardIndex((prev) => (prev === 0 ? data.length - 1 : prev - 1));
-    setImageIndex(0);
-  };
-
-  const nextSlide = () => {
-    setCardIndex((prev) => (prev === data.length - 1 ? 0 : prev + 1));
-    setImageIndex(0);
-  };
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <section className="projects">
       <div className="projects-intro">
-        <h1>College Projects</h1>
+        <h1>Projects & Experience</h1>
         <p>
           Here are some of my college projects. I started exploring web
           development early on, building my first PHP website while
@@ -69,39 +51,22 @@ export default function Projects() {
           where needed.
         </p>
       </div>
-      <div className="card-container">
-        <button className="nav-btn left" onClick={prevSlide}>
-          &#10094;
-        </button>
-
-        <div className="card">
-          <div className="card-image">
-            <img
-              src={data[cardIndex].images[imageIndex]}
-              alt={data[cardIndex].title}
+        <div className="card-wrapper">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onView={() => setSelectedProject(project)}
             />
-          </div>
-
-          <div className="card-title">{data[cardIndex].title}</div>
-          <div className="card-details">{data[cardIndex].details}</div>
+          ))}
         </div>
 
-        <button className="nav-btn right" onClick={nextSlide}>
-          &#10095;
-        </button>
-      </div>
-      <div className="dots">
-        {data.map((_, i) => (
-          <span
-            key={i}
-            className={`dot ${i === cardIndex ? "active" : ""}`}
-            onClick={() => {
-              setCardIndex(i);
-              setImageIndex(0);
-            }}
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
           />
-        ))}
-      </div>
+        )}
     </section>
   );
 }

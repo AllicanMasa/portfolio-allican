@@ -72,7 +72,7 @@ const Skills = () => {
       {/* intro */}
       <div className="skills-container">
         <section className="skill-intro">
-          <h1>Experience</h1>
+          <h1>Skills</h1>
         </section>
 
         <section className="skill-description">
