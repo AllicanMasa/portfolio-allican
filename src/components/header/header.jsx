@@ -16,7 +16,7 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View my resume
+            View Resume
           </a>
         </div>
         <div className="connect">

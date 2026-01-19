@@ -13,7 +13,7 @@ export default function ProjectCard({ project, onView }) {
         <p>{project.shortdesc}</p>
       </div>
       <div className="modal-button">
-          <button onClick={onView}>View</button>
+          <button onClick={onView}>Read more</button>
         </div>
     </div>
   );
